@@ -1,0 +1,246 @@
+html,
+body{
+    background-color: #000;
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+button{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    align-items: center;
+    background-color: #fcff3a;
+}
+
+#header_logo{
+    width: 10vw;
+}
+
+.header div{
+    padding: 5px;
+    flex: auto;
+}
+
+.header_links{
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_button{
+    font-size: larger;
+    color: #000;
+    background-color: #00f0ff;
+    border: 2px solid #000;
+    padding: 0 20px;
+}
+
+.header_button:hover{
+    background-color: #000;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+}
+
+#ultimate{
+    color: #85131e;
+}
+
+#ultimate:hover {
+    padding: 1px 10px;
+    background: linear-gradient(180deg, transparent 60%, #d32233 60%);
+}
+
+.hero_section{
+    background-color: #fcff3a;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    align-items: center;
+}
+
+.hero_section div{
+    flex: auto;
+}
+
+.hero_text{
+    font-size: xx-large;
+    padding: 30px;
+}
+
+#hero_button{
+    font-size: xx-large;
+    color: #85131e;
+    background-color: #d32233;
+    border: 3px solid #85131e;
+}
+
+#hero_button:hover{
+    color: #d32233;
+    background-color: #85131e;
+    border: 3px solid #d32233;
+}
+
+#hero_image{
+    height: 75vh;
+}
+
+.information_section{
+    color: #00f0ff;
+    text-align: center;
+    padding: 30px;  
+}
+
+.information_header{
+    font-size: x-large;
+    padding: 20px;
+}
+
+.information_boxes{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: auto;
+}
+
+.information_box{
+    width: 20vw;
+    border: 4px solid  #00f0ff;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.box_image{
+    width: 100%;
+    display: block;
+}
+
+.text_drawer{
+    display: grid;
+    grid-template-rows: 0px;
+    transition: grid-template-rows 0.4s ease-out;
+}
+
+.box_text{
+    overflow: hidden;
+    text-align: center; 
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.information_box:hover .text_drawer{
+    grid-template-rows: 200px;
+}
+
+.quote_section{
+    background-color: #d32233;
+    text-align: center;
+    align-items: center;
+    padding: 5vh;
+}
+
+.cta_section{
+    color: #00f0ff;
+}
+
+.cta_section{
+    color: #00f0ff;
+    font-size: large;
+    background-color: #000;
+    border: 3px solid #00f0ff;
+    padding: 5vh;
+    margin: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta_button_section{
+    align-content: center;
+}
+
+#cta_heading{
+    font-size: xx-large;
+}
+
+#cta_button{
+    color: #00f0ff;
+    font-size: x-large;
+    background-color: #000;
+    border: 3px solid #00f0ff;
+    padding: 0px 20px;
+}
+
+#cta_button:hover{
+    color:  #000;
+    background-color: #00f0ff;
+    border: 3px #000 solid;
+}
+
+.footer{
+    background-color: #d32233;
+    padding: 1vh;
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Screens under 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Center the Header Elements */
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .header_links {
+        justify-content: center;
+    }
+
+    /* 2. Stack the Hero Section and fix the image */
+    .hero_section {
+        flex-direction: column; /* Stacks the text on top of the image */
+        text-align: center;
+    }
+    
+    #hero_image {
+        height: auto; /* Removes the 75vh restriction */
+        width: 90%;   /* Makes the image fit perfectly inside the phone screen */
+        margin-bottom: 20px;
+    }
+
+    /* 3. Make the Info Boxes full-width */
+    .information_box {
+        width: 85vw; /* Instead of 20vw, they now take up 85% of the mobile screen */
+        margin-bottom: 10px;
+    }
+
+    /* 4. Stack the Call to Action section */
+    .cta_section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin: 5vh 20px; /* Reduces the massive 10vh margin for smaller screens */
+    }
+}

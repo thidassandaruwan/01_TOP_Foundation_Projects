@@ -1,0 +1,67 @@
+:root{
+    --winning-background: lightgreen;
+    --loosing-background: rgb(244, 99, 99);
+    --draw-background: rgb(248, 248, 121);
+    
+    --theme-color: var(--winning-background);
+}
+
+html{
+    font-family: monospace;
+}
+
+.start_button_wrappper{
+    display: flex;
+    height: 97vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.result_section{
+    background-color: var(--theme-color);
+    text-align: center;
+    font-size: x-large;
+    display: none;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#start_button{
+    background-color: var(--theme-color);
+    font-family: inherit;
+    font-size: xxx-large;
+    border: none;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#start_button:hover{
+    background-color: white;
+    border: solid var(--theme-color);
+}
+
+.game_content,
+.output_area{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    flex: auto;
+    border: solid var(--theme-color);
+    border-radius: 10px;
+}
+
+.opponents{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.game_area,
+.output_area{
+    display: none;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <div class="app-container">
+        <section class="tools-section">
+            <h1 class="section-title">Tools</h1>
+            <div class="controls">
+                <button id="press-hold-btn" class="tool-btn" aria-pressed="true">Press & Hold</button>
+                <button id="erase-btn" class="tool-btn" aria-pressed="false">Erase</button>
+                <button id="clear-btn" class="tool-btn">Clear</button>
+                <button id="resize-btn" class="tool-btn">Resize</button>
+                <button id="auto-color-btn" class="tool-btn" aria-pressed="false">Automatic Multi-Color</button>
+                <button id="random-color-btn" class="tool-btn">Random Color</button>
+                <input id="color-sample" type="color" value="#8893f4">
+            </div>
+        </section>
+
+        <section class="board-section">
+            <h1 class="section-title" id="drawing-board-size"></h1>
+            <div class="drawing-board">
+                
+            </div>
+        </section>
+
+        <section class="instructions-section">
+            <h1 class="section-title">Instructions</h1>
+            <ol class="instruction-list">
+                <li class="instruction">Select <strong>Press & Hold </strong>so that board only register mouse movements when the left mouse button is pressed.</li>
+                <li class="instruction">Select <strong>Erase</strong> to uncolor cells</li>
+                <li class="instruction">Press <strong>Clear</strong> to clear out entire drawing board.</li>
+                <li class="instruction">Press <strong>Resize</strong> to customise the drawing board gridsize. Only numbers from 10 - 100 are accepted.</li>
+                <li class="instruction">Select <strong>Automatic Multi-Color</strong> to draw using randomly generated multiple colors for each pixel.</li>
+                <li class="instruction">Press <strong>Random Color</strong> to generate a random color which will be shown in the color sample section</li>
+                <li class="instruction">Feel free to <strong>choose a color</strong> from the <strong>color picker</strong>.</li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
